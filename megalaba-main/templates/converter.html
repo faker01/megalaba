@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+         background-image: url('img/background.jpg');
+         background-size: 170%;
+         text-align: center;
+        }
+    </style>
+    <title>Currency Converter</title>
+</head>
+<body>
+    <h1>Currency Converter</h1>
+    <form action="/api/convert" method="POST">
+        <label for="from">From:</label>
+        <input type="text" name="from" id="from">
+        <label for="to">To:</label>
+        <input type="text" name="to" id="to">
+        <label for="amount">Amount:</label>
+        <input type="number" name="amount" id="amount">
+        <input type="submit" value="Convert">
+    </form>
+    <br>
+    <div id="result"></div>
+</body>
+</html>
