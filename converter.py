@@ -11,6 +11,7 @@ db = take_db(URL)
 app = flask.Flask(__name__)
 conv = Converter(db)
 
+
 @app.route('/')
 def main_str():
     return flask.render_template('converter.html')
@@ -31,11 +32,11 @@ def submit():
         return main_str()
 
 
-
 @app.route('/result')
 def result():
     res = conv.convert()
-    return "from {} to {} = {}".format(conv.inp, conv.out, res[:res.find(".") + 3])
+    return flask.render_template('result.html', fr=conv.inp, to=conv.out, result=res[:res.find(".") + 3])
+
 
 if __name__ == '__main__':
     app.run(debug=True)
