@@ -1,0 +1,21 @@
+<html>
+<head>
+    <title>Currency Converter</title>
+    <style>
+          body {
+         background-image: url(img/background.jpg);
+         background-size: 170%;
+         text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>{{ fr }} to {{ to }}</h1>
+    <h1>{{ result }}</h1>
+    <form action="/api/convert" method="POST">
+        <a href="/">Back</a>
+    </form>
+    <br>
+    <div id="result"></div>
+</body>
+</html>
